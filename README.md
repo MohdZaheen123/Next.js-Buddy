@@ -1,5 +1,5 @@
 
-# Next-js-buddy
+# Next-buddy
 A command line interface (CLI) for creating Next.js app with ease. The project is initialized with latest Next.js and Shadcn UI library. stay tuned for more customization !!
 
 [![npm version](https://badge.fury.io/js/next-js-buddy.svg)](https://www.npmjs.com/package/next-js-buddy)
@@ -14,19 +14,19 @@ Simplify the process of creating a Next.js project with Shadcn UI library using 
 
 ## Installation
 
-You can install `Next-js-buddy` globally using npm or yarn:
+You can install `Next-buddy` globally using npm or yarn:
 
 ```bash
-npm install -g next-js-buddy
+npm install -g next-buddy
 # or
-yarn global add next-js-buddy
+yarn global add next-buddy
 ```
 
 # Usage
 ## Initializing a Next.js Project
 To create a new Next.js project with Shadcn UI, run the following command:
 ```bash
-next-js-buddy
+next-buddy
 ```
 This command will guide you through the project initialization process and create the necessary project structure.
 
