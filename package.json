@@ -1,7 +1,7 @@
 {
   "name": "next-buddy",
-  "bin":"index.js",
-  "version": "1.0.0",
+  "bin": "index.js",
+  "version": "2.0.0",
   "type": "module",
   "description": "",
   "main": "index.js",
