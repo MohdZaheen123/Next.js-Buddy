@@ -30,6 +30,8 @@ next-js-buddy
 ```
 This command will guide you through the project initialization process and create the necessary project structure.
 
+![instruction image](next-buddy.png)
+
 # License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
