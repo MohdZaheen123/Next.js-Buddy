@@ -12,7 +12,7 @@ async function askname() {
   return inquirer.prompt({
     name: 'Project_name',
     type: 'input',
-    message: 'Would you like to install and setup next.js, zaheen? (y/n)',
+    message: 'Would you like to install and setup next.js? (y/n)',
   }).then(answer => {
     projectname = answer.Project_name;
   });
