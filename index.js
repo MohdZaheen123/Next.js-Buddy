@@ -95,7 +95,7 @@ async function github_lucide_setup(){
           execSync(`npm install lucide-react && git add . && git commit -m "first commit" && git branch -M main && git remote add origin ${github_repo} && git push --set-upstream origin main && code .`, { stdio: 'inherit' });
         })
     }
-    else if(github){
+    else if(github_repo){
       return inquirer.prompt([{name: 'github',type: 'input',message: 'Give your repo link..'}])
       .then((answer)=>{
         github_repo=answer.github
