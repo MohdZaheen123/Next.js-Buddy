@@ -69,8 +69,9 @@ function intro() {
 async function main() {
   try {
     await intro();
-    console.log(gradient.pastel.multiline('Create Next.js app in ease. Initializing Next.js app with Schnadcn UI!!'));
+    console.log(gradient.pastel.multiline('Create Next.js app in ease. Initializing Next.js app with shadcn UI!!'));
     await askname();
+    
     const success =await changeDirectoryAndCreateNextApp();
     await github_lucide_setup()
     if (success) {
@@ -86,11 +87,19 @@ async function main() {
 
 async function github_lucide_setup(){
 
-    if (github_repo) {
+    if (github_repo && Lucide) {
+      console.log(gradient.pastel.multiline('Initializing setup of Github!!'));
+        return inquirer.prompt([{name: 'github',type: 'input',message: 'Give your repo link..'}])
+        .then((answer)=>{
+          github_repo=answer.github
+          execSync(`npm install lucide-react && git add . && git commit -m "first commit" && git branch -M main && git remote add origin ${github_repo} && git push --set-upstream origin main && code .`, { stdio: 'inherit' });
+        })
+    }
+    else if(github){
       return inquirer.prompt([{name: 'github',type: 'input',message: 'Give your repo link..'}])
       .then((answer)=>{
         github_repo=answer.github
-        execSync(`git remote add origin ${github_repo}`, { stdio: 'inherit' });
+        execSync(`git add . && git commit -m "first commit" && git branch -M main && git remote add origin ${github_repo} && git push --set-upstream origin main && code .`, { stdio: 'inherit' });
       })
     }
 }
@@ -98,7 +107,7 @@ async function github_lucide_setup(){
 async function changeDirectoryAndCreateNextApp() {
   try {
     // Change the directory to "nnn" and then run the "npx create-next-app" command.
-    execSync(`npx create-next-app@latest . && npx shadcn-ui@latest init && code .`, { stdio: 'inherit' });
+    execSync(`npx create-next-app@latest . && npx shadcn-ui@latest init`, { stdio: 'inherit' });
     return true;
   } catch (e) {
     console.error('Failed to change directory and create Next.js app:', e);
