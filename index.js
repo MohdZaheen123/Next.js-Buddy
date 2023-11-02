@@ -71,8 +71,8 @@ async function main() {
     await intro();
     console.log(gradient.pastel.multiline('Create Next.js app in ease. Initializing Next.js app with Schnadcn UI!!'));
     await askname();
-    console.log(projectname)
     const success =await changeDirectoryAndCreateNextApp();
+    await github_lucide_setup()
     if (success) {
       console.log('Directory changed, and Next.js app created successfully.');
     } else {
@@ -82,6 +82,17 @@ async function main() {
     console.error('An error occurred:', e);
   }
 
+}
+
+async function github_lucide_setup(){
+
+    if (github_repo) {
+      return inquirer.prompt([{name: 'github',type: 'input',message: 'Give your repo link..'}])
+      .then((answer)=>{
+        github_repo=answer.github
+        execSync(`git remote add origin ${github_repo}`, { stdio: 'inherit' });
+      })
+    }
 }
 
 async function changeDirectoryAndCreateNextApp() {
