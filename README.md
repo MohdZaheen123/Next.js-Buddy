@@ -2,8 +2,8 @@
 # Next-buddy
 A command line interface (CLI) for creating Next.js app with ease. The project is initialized with latest Next.js and Shadcn UI library. stay tuned for more customization !!
 
-[![npm version](https://badge.fury.io/js/next-js-buddy.svg)](https://www.npmjs.com/package/next-js-buddy)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yourusername/next-js-buddy/blob/main/LICENSE)
+[![npm version](https://badge.fury.io/js/next-buddy.svg)](https://www.npmjs.com/package/next-buddy)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yourusername/next-buddy/blob/main/LICENSE)
 
 Simplify the process of creating a Next.js project with Shadcn UI library using this handy npm package.
 
