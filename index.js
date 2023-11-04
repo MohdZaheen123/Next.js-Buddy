@@ -61,8 +61,8 @@ async function main() {
     
     const success =await changeDirectoryAndCreateNextApp();
     await github_lucide_setup()
-    if (success) {
-      console.log('Directory changed, and Next.js app created successfully.');
+    if (success) { 
+      console.log('Next.js app created successfully!!');
     } else {
       console.error('Some commands failed.');
     }
@@ -88,6 +88,9 @@ async function github_lucide_setup(){
         github_repo=answer.github
         execSync(`git add . && git commit -m "first commit" && git branch -M main && git remote add origin ${github_repo} && git push --set-upstream origin main && code .`, { stdio: 'inherit' });
       })
+    }
+    else{
+      execSync(`code .`, { stdio: 'inherit' });
     }
 }
 
